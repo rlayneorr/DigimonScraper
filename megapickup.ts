@@ -6,17 +6,23 @@ import { getField, getAttributes } from './utilities';
 var fs = require('fs');
 
 const missingList: Digimon[] = [];
-const missing: string[] = ['Ajatarmon','Angewomon_(X-Antibody)','Arresterdramon:_Superior_Mode_(Brave_Snatcher)',
-    'Algomon_(Perfect)','Arkhai_Angemon','Baalmon_(X-Antibody)','Black_Mach_Gaogamon','Boutmon','Bombermon','Canoweissmon',
-    'Climbmon','Crys_Paledramon','Cyberdramon_(X-Antibody)','Duramon','Entmon','Eosmon_(Perfect)','Frozomon','Fumamon',
-    'Garuru Metal','Ghilliedhumon','Grey_Wars','Grademon_(Vice)','Gusokumon','Gyukimon','Gogmamon','Huankunmon',
-    'Holy_Angemon:_Priest_Mode','Meteormon','Jazarichmon','Lavogaritamon','Lamortmon','Lady_Devimon_(X-Antibody)','Lynxmon',
-    'Metabee','Rokusho','Manticoremon','Marin_Chimairamon','Majiramon','Mechanorimon','Mephismon_(X-Antibody)','Meicrackmon',
-    'Meicrackmon:_Vicious_Mode','Megalo_Growmon_(Orange)','Metal_Greymon_(Virus)_(X-Antibody)','Metal_Greymon:_Alterous_Mode',
-    'Monzaemon_(X-Antibody)','Datamon','Oboromon','Oleamon','Piranimon','Pistmon','Rize_Greymon_(X-Antibody)','Rebellimon',
-    'Rare_Raremon', 'Raiji_Ludomon','Shootmon','Sagomon','Splashmon','Splashmon_Darkness_Mode','Stiffilmon','Tekkamon','Tempomon',
-    'Thetismon','Toropiamon','Vamdemon_(X-Antibody)','Vermillimon','Vulturemon','WereGarurumon:_Sagittarius_Mode',
-    'Yatagaramon_(2006_Anime_Version)','Zanmetsumon'];
+const missing: string[] = ['Achillesmon','Amphimon','Abbadomon','Abbadomon_Core','Arcturusmon','Barbamon_(X-Antibody)',
+    'Beel_Starmon_(X-Antibody)','Belphemon_(X-Antibody)','Blitz_Greymon','Bloom_Lordmon','Bryweludramon',
+    'Cherubimon_(Vice)_(X-Antibody)','Cherubimon_(Virtue)_(X-Antibody)','Craniummon_(X-Antibody)','Cres_Garurumon',
+    'Cthyllamon','Demon_(X-Antibody)','Demon_Super_Ultimate','Diablomon','Diablomon_(X-Antibody)','Diarbbitmon',
+    'Dijiangmon','Durandamon','Done_Devimon','Eosmon_(Ultimate)','Examon_(X-Antibody)','Fros_Velgrmon',
+    'Gaioumon:_Itto_Mode','Gankoomon_(X-Antibody)','Grace_Novamon','Heavy_Leomon','Hexeblaumon','Hououmon_(X-Antibody)',
+    'Huanglongmon:_Ruin_Mode','Hydramon','Imperialdramon:_Dragon_Mode','Imperialdramon:_Dragon_Mode_(Black)',
+    'Imperialdramon:_Fighter_Mode_(Black)','Jesmon_(X-Antibody)','Jesmon_GX','Justimon:_Accel_Arm',
+    'Justimon:_Blitz_Arm','Justimon:_Critical_Arm','Justimon_(X-Antibody)','Jyureimon_(Christmas_Tree)',
+    'Kazuchimon','Kuzuhamon:_Miko_Mode','Leviamon_(X-Antibody)','Lilithmon_(X-Antibody)','Lord_Knightmon_(X-Antibody)',
+    'Lovely_Angemon','Lucemon_(X-Antibody)','Mervamon','Metal_Etemon','Metallicdramon','Minervamon_(X-Antibody)',
+    'Mitamamon','NoblePumpmon','Nidhoggmon','Ofanimon_(X-Antibody)','Ofanimon:_Falldown_Mode_(X-Antibody)',
+    'Ogudomon_(X-Antibody)','Omedamon','Omega_Knight','Omegamon:_Merciful_Mode','Ordinemon','Rafflesimon',
+    'Ragna_Lordmon','Raguelmon','Rapidmon_(X-Antibody)','Rasenmon','Rasenmon:_Fury_Mode','Rasielmon','Regalecusmon',
+    'Sleipmon_(X-Antibody)','SaberLeomon','Sakuyamon_(X-Antibody)','Sakuyamon:_Miko_Mode','Shine_Greymon',
+    'Shin_Monzaemon','Shakamon','Shivamon','Shroudmon','Siriusmon','Ultimate_Brachimon','Boltboutamon','Venusmon',
+    'Volcanicdramon','Xiangpengmon','Dark_Knightmon_(X-Antibody)'];
 for (let uri of missing) {
     fixture('Obtain ' + uri).page('https://wikimon.net/' + uri).skipJsErrors();
     test('get ' + uri, async t => {
