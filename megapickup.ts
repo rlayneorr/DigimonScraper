@@ -22,7 +22,7 @@ const missing: string[] = ['Achillesmon','Amphimon','Abbadomon','Abbadomon_Core'
     'Ragna_Lordmon','Raguelmon','Rapidmon_(X-Antibody)','Rasenmon','Rasenmon:_Fury_Mode','Rasielmon','Regalecusmon',
     'Sleipmon_(X-Antibody)','SaberLeomon','Sakuyamon_(X-Antibody)','Sakuyamon:_Miko_Mode','Shine_Greymon',
     'Shin_Monzaemon','Shakamon','Shivamon','Shroudmon','Siriusmon','Ultimate_Brachimon','Boltboutamon','Venusmon',
-    'Volcanicdramon','Xiangpengmon','Dark_Knightmon_(X-Antibody)', 'Quartzmon'];
+    'Volcanicdramon','Xiangpengmon','Dark_Knightmon_(X-Antibody)', 'Quartzmon', 'Shoutmon_DX'];
 for (let uri of missing) {
     fixture('Obtain ' + uri).page('https://wikimon.net/' + uri).skipJsErrors();
     test('get ' + uri, async t => {
