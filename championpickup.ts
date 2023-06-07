@@ -7,7 +7,7 @@ var fs = require('fs');
 
 const missingList: Digimon[] = [];
 const missing: string[] = ['Algomon_(Adult)','Baboongamon','Bulkmon','BetelGammamon','Black_Tailmon_Uver.','Black_Gaogamon',
-    'BomberNanimon','Bao_Hackmon','Baluchimon','Dark_Tyranomon_(X-Antibody)','DarkMaildramon','DexDorugamon','Ebidramon',
+    'BomberNanimon','Bao_Hackmon','Baluchimon','Dark_Tyranomon_(X-Antibody)','DexDorugamon','Ebidramon',
     'Eosmon_(Adult)','Exermon','Eyesmon','Eyesmon:_Scatter_Mode','Filmon','Greymon_(Blue)','Greymon_(Blue)_(X-Antibody)',
     'Gulus_Gammamon','Hover_Espimon','Hudiemon','Icemon','Jazardmon','Kaus_Gammamon','Komondomon','Lavorvomon','Liamon',
     'Lianpumon','Machmon','Meramon_(X-Antibody)','Metabee','Mimicmon','Numemon_(X-Antibody)','Namakemon','Orgemon_(X-Antibody)',

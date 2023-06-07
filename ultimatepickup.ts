@@ -16,7 +16,8 @@ const missing: string[] = ['Ajatarmon','Angewomon_(X-Antibody)','Arresterdramon:
     'Monzaemon_(X-Antibody)','Datamon','Oboromon','Oleamon','Piranimon','Pistmon','Rize_Greymon_(X-Antibody)','Rebellimon',
     'Rare_Raremon', 'Raiji_Ludomon','Shootmon','Sagomon','Splashmon','Splashmon_Darkness_Mode','Stiffilmon','Tekkamon','Tempomon',
     'Thetismon','Toropiamon','Vamdemon_(X-Antibody)','Vermillimon','Vulturemon','WereGarurumon:_Sagittarius_Mode',
-    'Yatagaramon_(2006_Anime_Version)','Zanmetsumon', 'Xingtianshou', 'Omega_Shoutmon_(X-Antibody)', 'Regulusmon'];
+    'Yatagaramon_(2006_Anime_Version)','Zanmetsumon', 'Xingtianshou', 'Omega_Shoutmon_(X-Antibody)', 'Regulusmon',
+    'Cargodramon', 'DarkMaildramon'];
 for (let uri of missing) {
     fixture('Obtain ' + uri).page('https://wikimon.net/' + uri).skipJsErrors();
     test('get ' + uri, async t => {
